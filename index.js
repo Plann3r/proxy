@@ -35,4 +35,4 @@ var proxyTest= proxy(optionsTest);
 var app = express();
     app.use('/thalento', proxyThalento);
     app.use('/test',proxyTest);
-    app.listen(3000);
+    app.listen(80);
