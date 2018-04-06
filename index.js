@@ -7,7 +7,8 @@ var app = express();
 // proxy middleware options
 var optionsThalento = {
         target: 'https://one.thalentodev.be/vl/rest/planner', // target host
-        changeOrigin: true,               // needed for virtual hosted sites
+        changeOrigin: true,
+        logLevel : 'debug',
         ws: true,                         // proxy websockets
         pathRewrite: {
             '^/thalento' : '/'           // remove base path
@@ -21,7 +22,8 @@ var proxyThalento = proxy(optionsThalento);
 // proxy middleware options
 var optionsTest = {
         target: 'https://young-retreat-32139.herokuapp.com/signon', // target host
-        changeOrigin: true,               // needed for virtual hosted sites
+        changeOrigin: true,
+        logLevel : 'debug',             
         ws: true,                         // proxy websockets
         pathRewrite: {
             '^/test' : '/'           // remove base path
