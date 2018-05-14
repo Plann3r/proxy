@@ -6,7 +6,7 @@ var app = express();
 
 // proxy middleware options
 var optionsThalento = {
-        target: 'https://one.thalentodev.be/vl/rest/planner', // target host
+        target: 'https://tool.thalento.com/vl/rest/planner', // target host
         changeOrigin: true,
         logLevel : 'debug',
         ws: true,                         // proxy websockets
@@ -21,7 +21,7 @@ var proxyThalento = proxy(optionsThalento);
 
 // proxy middleware options
 var optionsThalento2 = {
-        target: 'https://one.thalentodev.be/en/rest/confirmMeeting', // target host
+        target: 'https://tool.thalento.com/en/rest/confirmMeeting', // target host
         changeOrigin: true,
         logLevel : 'debug',
         ws: true,                         // proxy websockets
